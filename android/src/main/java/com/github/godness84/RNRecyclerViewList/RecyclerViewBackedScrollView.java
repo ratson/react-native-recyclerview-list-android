@@ -1,5 +1,6 @@
 package com.github.godness84.RNRecyclerViewList;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.PointF;
 import android.support.annotation.Nullable;
@@ -358,6 +359,7 @@ public class RecyclerViewBackedScrollView extends RecyclerView {
             mRequestedLayout = true;
             this.post(new Runnable() {
                 @Override
+                @SuppressLint("WrongCall")
                 public void run() {
                     mRequestedLayout = false;
                     layout(getLeft(), getTop(), getRight(), getBottom());
