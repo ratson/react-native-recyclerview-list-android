@@ -7,21 +7,14 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
     }
     lintOptions {
         warning 'InvalidPackage'
     }
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    compile fileTree(dir: "libs", include: ["*.jar"])
+    provided "com.facebook.react:react-native:+"
     compile "com.android.support:appcompat-v7:27.1.0"
     compile 'com.android.support:recyclerview-v7:27.1.0'
-    compile "com.facebook.react:react-native:+"
 }
