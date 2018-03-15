@@ -1,6 +1,6 @@
 {
   "name": "react-native-recyclerview-list-android",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "A RecyclerView implementation for React Native",
   "main": "index.js",
   "repository": {
