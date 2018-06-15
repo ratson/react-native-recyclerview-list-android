@@ -1,3 +1,8 @@
+# This is fork
+
+Fork from https://github.com/godness84/react-native-recyclerview-list with [following changes](https://github.com/ratson/react-native-recyclerview-list-android/compare/66df1b0ea013122b6bc3f2c04713e35f85df5420...master).
+
+Install via `npm install react-native-recyclerview-list-android --save`.
 
 # react-native-recyclerview-list
 
