@@ -1,12 +1,16 @@
+def getExtOrDefault(name, defaultValue) {
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : defaultValue
+}
+
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion getExtOrDefault('compileSdkVersion', 28)
+    buildToolsVersion getExtOrDefault('buildToolsVersion', "28.0.3")
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 26
+        minSdkVersion getExtOrDefault('minSdkVersion', 16)
+        targetSdkVersion getExtOrDefault('targetSdkVersion', 28)
     }
     lintOptions {
         warning 'InvalidPackage'
@@ -14,7 +18,9 @@ android {
 }
 
 dependencies {
-    provided "com.facebook.react:react-native:+"
-    compile "com.android.support:appcompat-v7:27.1.0"
-    compile 'com.android.support:recyclerview-v7:27.1.0'
+     def supportLibVersion = project.hasProperty('supportLibVersion') ? project.supportLibVersion : "28.0.0"
+
+    implementation "com.facebook.react:react-native:+"
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibVersion"
 }
