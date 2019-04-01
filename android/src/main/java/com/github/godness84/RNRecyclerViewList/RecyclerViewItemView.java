@@ -23,7 +23,6 @@ public class RecyclerViewItemView extends ViewGroup {
         if (mItemIndexInitialized  && this.mItemIndex != itemIndex){
             this.mItemIndex = itemIndex;
             if (getParent() != null) {
-                ((RecyclerViewBackedScrollView.RecyclableWrapperViewGroup) getParent()).getAdapter().notifyItemChanged(mItemIndex);
                 ((RecyclerViewBackedScrollView.RecyclableWrapperViewGroup) getParent()).getAdapter().notifyItemChanged(itemIndex);
             }
         } else {
