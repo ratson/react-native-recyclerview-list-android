@@ -10,6 +10,10 @@ public class RecyclerViewItemView extends ViewGroup {
     private int mItemIndex;
     private boolean mItemIndexInitialized;
 
+    public RecyclerViewItemView(Context context) {
+        super(context);
+    }
+
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         // noop
