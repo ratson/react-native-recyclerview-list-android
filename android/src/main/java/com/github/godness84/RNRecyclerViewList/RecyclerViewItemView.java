@@ -18,7 +18,7 @@ public class RecyclerViewItemView extends ViewGroup {
     public void setItemIndex(int itemIndex) {
         if (mItemIndexInitialized  && this.mItemIndex != itemIndex){
             this.mItemIndex = itemIndex;
-            if (getParent() != null) {
+            if (getParent() instanceof RecyclerViewBackedScrollView.RecyclableWrapperViewGroup) {
                 ((RecyclerViewBackedScrollView.RecyclableWrapperViewGroup) getParent()).getAdapter().notifyItemChanged(itemIndex);
             }
         } else {
